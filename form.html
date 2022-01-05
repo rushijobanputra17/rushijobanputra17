@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Entry Form</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <style>
+        td, th {
+            text-align: left;
+        }
+
+        td{
+            padding-left:10px;
+        }
+
+        footer {
+            text-align: center;
+            width: 75%;
+        }
+
+        h2 {
+            text-align: center;
+            width: 75%;
+        }
+    </style>
+</head>
+<body>
+
+
+    <br />
+    <div class="container">
+
+        <br />
+
+        <div class="row">
+            <header>
+                <h2>College Details</h2>
+            </header>
+
+            <div class="col-4" style=" background-color: #f1f1f1 ">
+                <section style="display: table;">
+                    <h5>Quick Links</h5>
+                    <nav>
+                        <li><a href="https://www.w3schools.com/">About collage infrastructure</a></li>
+                        <li><a href="https://www.w3schools.com/">About collage placement</a></li>
+                        <li><a href="https://www.w3schools.com/">About collage faculty </a></li>
+                    </nav>
+                    <br />
+                    <article style="background-color: #f1f1f1">
+                        <div class="row">
+                            <div class="col-4" style="border:1px solid ">
+                                <img src="image.jfif" width="100%" height="100%" alt="college_image" />
+                            </div>
+                            <div class="col-8">
+                                <h4>About Collage</h4>
+                                <p>
+
+                                    took a galley of type and scrambled it to make a type specimen book
+                                    . It has survived not only five centuries, but also the leap into electronic.
+                                </p>
+                            </div>
+                        </div>
+
+                    </article>
+                </section>
+            </div>
+
+            <div class="col-5" style="background-color: #f1f1f1">
+                <h5>Collage Infracture</h5>
+                <iframe src="https://www.youtube.com/embed/OYdkBxbJFks" width="100%" height="80%">
+                </iframe>
+
+            </div>
+        </div>
+
+        <form id="form1">
+            <div class="row">
+                <table style="width: 75%; background-color: #f1f1f1">
+                    <tr>
+                        <td colspan="4" style="text-align:center">Registration Form</td>
+                    </tr>
+                    <tr>
+                        <td style="width:20%">First Name:</td>
+                        <td style="width:28%">  <input type="text" id="firstName" placeholder="Enter name"class="form-control"/></td>
+                        <td style="width:20%"  >last name:</td>
+                        <td style="width: 28%">  <input type="text" id="lastName" placeholder="Enter name"class="form-control"/></td>
+
+                    </tr>
+                    <br />
+                    <tr>
+                        <td style="width:20%"> mobile Number:</td>
+                        <td style="width: 28%">   <input type="number" id="mobileNumber"class="form-control"placeholder="Enter Mobile address" /></td>
+                        <td style="width: 20%">Email:</td>
+                        <td style="width:28%">   <input type="email" id="emailAddress"class="form-control"placeholder="Enter Email Address " /></td>
+
+                    </tr>
+                    <tr>
+                        <td style="width:20%"> Gender:</td>
+                        <td style="width: 28%">
+                            <input type="radio" id="male" name="gender" value="male">
+                            <label for="male">Male</label><br>
+                            <input type="radio" id="female" name="gender" value="female">
+                            <label for="female">Female</label><br>
+                        </td>
+                        <td style="width: 20%;">Select Age:</td>
+                        <td style="width:28%">
+                            <select id="age" class="btn btn-secondary" name="age" onchange="changeValue()">
+                                <option value="-1">Select Age</option>
+                                <option value="18">Age : 18</option>
+                                <option value="19">Age : 19</option>
+                                <option value="20">Age : 20</option>
+                                <option value="21">Age : 21</option>
+                            </select>
+                        </td>
+
+                    </tr>
+
+                    <tr>
+                        <td style="width:20%"> Address:</td>
+                        <td style="width: 28%" colspan="3">   <textarea id="address" cols="60"class="form-control"ows="3"></textarea></td>
+
+                    </tr>
+                    <tr>
+                        <td style="width:20%">  <button type="submit"class="form-control"value="submit" form="form1" onclick="submitfun()">Submit</button></td>
+                        <td></td>
+                        <td style="width: 20%">  <button type="reset"class="form-control"value="reset" form="form1" onreset="resetData()"> reset</button></td>
+                        <td style="width:28%"></td>
+
+                    </tr>
+                </table>
+            </div>
+        </form>
+
+
+        <footer>
+            <p>@ Rushi Jobanputra </p>
+        </footer>
+    </div>
+
+
+
+
+    <script>
+        function submitfun() {
+            alert("Form Was Submitted");
+        }
+
+        function resetData() {
+            alert("The Form Was Reset.");
+            lastName.text = "";
+            firstName.text = "";
+            mobileNumber.text = "";
+            emailAddress.text = "";
+            age.selectedvalue = -1;
+
+        }
+
+        function changeValue() {
+            var i = document.getElementById("age").value;
+            if (i == -1) {
+                alert("Please your Age:");
+            }
+            alert("your selected item is : " + i);
+        }
+    </script>
+</body>
+</html>
