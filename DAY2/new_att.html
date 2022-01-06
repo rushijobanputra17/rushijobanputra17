@@ -10,7 +10,7 @@
 
 
     <headr>
-        <center><h2><abbr title="Satva Solution is an IT organization">Welcome to satva Solution</abbr></h2></center>
+        <center><h2><abbr title="Satva Solution is an IT organization">Welcome to satva Solution(abbr tag)</abbr></h2></center>
     </headr>
     <div>
         <h3>Address of Satva solution:</h3>
@@ -47,10 +47,36 @@
 
     <div>
         <h4>
-            Font Base
+            Font Base<br />
             set default font size, face(type), color.
             <basefont color="#FF0000" face="Helvetica" size="+2" />
         </h4>
+    </div>
+    <div>
+        <h3>
+            Bdi and Bdo tag use
+        </h3>
+        <p> original text: i'm working in satva solution.. </p>
+        <p>
+            after applying bdo text with rtl property<br />
+            <bdo dir="rtl">
+                i'm <bdi><b>working in</b></bdi> satva solution at theltej....
+            </bdo>
+        </p>
+
+      <div>
+          <h3>
+              blockquote: used to specifty that text that used from another source.
+          </h3>
+          <p>This Text is taken from savta solution</p>
+          <blockquote cite="https://satvasolutions.com/" >
+              QuickBooks integrations and addons <br />
+              have always been fun! Get a Streamlined
+              process & let technology handle your time waster tasks.<br />
+              Custom QuickBooks API integration is exactly one of our core expertise.
+          </blockquote>
+      </div>
+
     </div>
 </body>
 </html>
@@ -59,5 +85,8 @@
 <!--
 abbr : for displaying specific information when mouse hover.
 address : for displaying contact information
-
+audio : for playing audio in site.
+bdi and bdo: bdo can set direction ,bdi can change text in original fromat
+<big>
+    used to make the original text large
     -->
