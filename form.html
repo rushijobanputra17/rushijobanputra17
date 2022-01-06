@@ -9,8 +9,8 @@
             text-align: left;
         }
 
-        td{
-            padding-left:10px;
+        td {
+            padding-left: 10px;
         }
 
         footer {
@@ -53,11 +53,24 @@
                             </div>
                             <div class="col-8">
                                 <h4>About Collage</h4>
-                                <p>
 
-                                    took a galley of type and scrambled it to make a type specimen book
-                                    . It has survived not only five centuries, but also the leap into electronic.
-                                </p>
+                                <dl>
+                                    <dt>
+                                        Collage Name:
+                                    </dt>
+                                    <dd>xyz collage of science</dd>
+                                    <dt>
+                                        collage Address
+                                    </dt>
+                                    <dd>
+                                        A-23, Padam Building, Dr N R Karode Marg, Borivali,Mumbai,
+                                        Maharashtra
+
+
+                                    </dd>
+                                </dl>
+
+
                             </div>
                         </div>
 
@@ -81,17 +94,17 @@
                     </tr>
                     <tr>
                         <td style="width:20%">First Name:</td>
-                        <td style="width:28%">  <input type="text" id="firstName" placeholder="Enter name"class="form-control"/></td>
-                        <td style="width:20%"  >last name:</td>
-                        <td style="width: 28%">  <input type="text" id="lastName" placeholder="Enter name"class="form-control"/></td>
+                        <td style="width:28%">  <input type="text" id="firstName" placeholder="Enter name" class="form-control" required minlength="4" maxlength="10" /></td>
+                        <td style="width:20%">last name:</td>
+                        <td style="width: 28%">  <input type="text" id="lastName" placeholder="Enter name" class="form-control" /></td>
 
                     </tr>
                     <br />
                     <tr>
                         <td style="width:20%"> mobile Number:</td>
-                        <td style="width: 28%">   <input type="number" id="mobileNumber"class="form-control"placeholder="Enter Mobile address" /></td>
+                        <td style="width: 28%">   <input type="text" id="mobileNumber" class="form-control" placeholder="Enter Mobile Number" required minlength="10" maxlength="10" pattern="/(7|8|9)\d{9}/" /></td>
                         <td style="width: 20%">Email:</td>
-                        <td style="width:28%">   <input type="email" id="emailAddress"class="form-control"placeholder="Enter Email Address " /></td>
+                        <td style="width:28%">   <input type="email" id="emailAddress" class="form-control" placeholder="Enter Email Address " required /></td>
 
                     </tr>
                     <tr>
@@ -117,13 +130,13 @@
 
                     <tr>
                         <td style="width:20%"> Address:</td>
-                        <td style="width: 28%" colspan="3">   <textarea id="address" cols="60"class="form-control"ows="3"></textarea></td>
+                        <td style="width: 28%" colspan="3">   <textarea id="address" cols="60" class="form-control" ows="3"></textarea></td>
 
                     </tr>
                     <tr>
-                        <td style="width:20%">  <button type="submit"class="form-control"value="submit" form="form1" onclick="submitfun()">Submit</button></td>
+                        <td style="width:20%">  <button type="submit" class="form-control" value="submit" form="form1" onclick="submitfun()">Submit</button></td>
                         <td></td>
-                        <td style="width: 20%">  <button type="reset"class="form-control"value="reset" form="form1" onreset="resetData()"> reset</button></td>
+                        <td style="width: 20%">  <button type="reset" class="form-control" value="reset" form="form1" onreset="resetData()"> reset</button></td>
                         <td style="width:28%"></td>
 
                     </tr>
@@ -142,7 +155,7 @@
 
     <script>
         function submitfun() {
-            alert("Form Was Submitted");
+
         }
 
         function resetData() {
