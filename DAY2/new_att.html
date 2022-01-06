@@ -4,6 +4,12 @@
     <title>
         New Tag
     </title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style>
+
 </head>
 <body>
 
@@ -78,6 +84,50 @@
       </div>
 
     </div>
+    <div>
+        <h3>caption tag: use for caption html table</h3>
+       <h3>colgroup and col tag in html</h3>
+        <table>
+            <caption>This is caption for table</caption>
+            <colgroup>
+                <col span="1" style="background-color:red" />
+            </colgroup>
+            <tr>
+                <th>heading 1</th>
+                <th>heading 2</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+        </table>
+
+    </div>
+
+    <div>
+        <h3>Data list : used to specify pre defined option for text box</h3>
+        <label for="city">choose from list</label>
+        <input list="cityOption" type="text"  id="city" />
+        <datalist id="cityOption">
+            <option value="rajkot">
+            <option value="surat">
+            <option value="delhi">
+            <option value="Banglore">
+        </datalist>
+    </div>
+    <div>
+        <h3>
+            Del and ins tag
+        </h3>
+      
+        <p>
+            in this para, this is old <del> deleted text</del> and this is new <ins>inserted text..</ins>
+        </p>
+    </div>
 </body>
 </html>
 
@@ -89,4 +139,10 @@ audio : for playing audio in site.
 bdi and bdo: bdo can set direction ,bdi can change text in original fromat
 <big>
     used to make the original text large
+caption : used to caption title for table
+    colspan and col : used to specify style to column
+    (span : for column number)
+datalist:provide default option for text box\
+del and ins tag
+    use for display deleted text and new inserted text
     -->
