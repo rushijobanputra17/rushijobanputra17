@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial;
+            color: black;
+        }
+
+        .split1 {
+            height: 100%;
+            width: 15%;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            overflow-x: hidden;
+            padding-top: 20px;
+            color: white;
+        }
+
+        .split2 {
+            height: 100%;
+            width: 70%;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            overflow-x: hidden;
+            padding-top: 20px;
+        }
+
+        .left {
+            left: 0;
+            border: 1px solid black;
+        }
+
+        .right {
+            left: 217px;
+            border: 1px solid black;
+        }
+
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            margin-left: -20px;
+            text-align: center;
+            padding: 8px;
+        }
+
+        input[type=text], select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            resize: horizontal;
+        }
+      
+
+        input[type=email] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            resize: horizontal;
+        }
+
+        input[type=url] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            resize: horizontal;
+        }
+
+       
+
+        .button-save {
+            background-color: cornflowerblue;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .button-cancel {
+            background-color: floralwhite;
+            color: black;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="split1 left" style="background-color: #2d373c">
+        <table>
+            <tr>
+                <td style="text-align:right">
+                    <img src="speedometer.png" width="30px" height="30px" />
+                </td>
+                <td style="text-align:left">
+                    Dashboard
+                </td>
+
+            </tr>
+            <tr>
+                <td style="text-align:right">
+                    <img src="iitem.jpg" width="30px" height="30px" />
+                </td>
+                <td style="text-align:left">
+                    Items
+                </td>
+
+            </tr>
+            <tr>
+                <td style="text-align:right">
+                    <img src="bank1.png" width="30px" height="30px" />
+                </td>
+                <td style="text-align:left">
+                    Banking
+                </td>
+
+            </tr>
+            <tr>
+                <td style="text-align:right">
+                 
+                </td>
+                <td style="text-align:left">
+                   Sales
+                </td>
+
+            </tr>
+        </table>
+    </div>
+
+    <div class="split2 right">
+        <table>
+            <tr>
+                <td>
+                    <img src="plus.jpg" width="30px" height="30px" />
+                </td>
+                <td>
+                    <img src="clock.png" width="30px" height="30px" />
+                </td>
+                <td style="text-align:left" colspan="2">
+                    <input type="text" placeholder="Search..">
+                </td>
+                <td style="text-align:right">
+                    Satva Solution
+                </td>
+                <td style="text-align:right">
+                    <img src="person.png" width="30px" height="30px" />
+                </td>
+                <td style="text-align:right">
+                    <img src="download.png" width="30px" height="30px" />
+                </td>
+
+                <td style="text-align:right">
+                    <img src="seting.png" width="30px" height="30px" />
+                </td>
+
+                <td style="text-align:right">
+                    <img src="cir.png" width="30px" height="30px" />
+                </td>
+
+            </tr>
+
+        </table>
+        <h3>
+            New Customer
+            <hr />
+        </h3>
+        <form id="form1">
+
+
+            <table style="width:70%;">
+                <tr>
+                    <td style="text-align:left">Customer:</td>
+                    <td style="text-align:left;padding-left:100px" colspan="2">
+                        <input type="radio" id="Business" name="Individual" value="Business">
+                        <label for="male">Business</label>
+                        <input type="radio" id="Individual" name="Individual" value="Individual">
+                        <label for="female">Individual</label><br>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align:left; ">
+                        primary Contact:
+                    </td>
+                    <td style="text-align: left; ">
+                        <select name="Salutation" id="Salutation" onchange="changeValue()">
+
+                            <option value="Salutation">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Salutation&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+
+
+
+
+                    </td>
+                    <td style="text-align:left;">
+                        <input type="text" id="firstName" placeholder="First Name" required minlength="4" maxlength="10" />
+                    </td>
+                    <td style="text-align:left  ">
+                        <input type="text" id="lastName" placeholder="last Name" required minlength="4" maxlength="10" />
+                    </td>
+
+
+                </tr>
+                <tr>
+                    <td style="text-align:left">
+                        Company name:
+
+                    </td>
+                    <td style="text-align: left; " colspan="2">
+                        <input type="text" id="companyName" placeholder="Company name.." />
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align:left" >
+                        Customer Display name:
+                    </td>
+                    <td style="text-align:left;" colspan="2">
+                        <input type="text" id="companyDisplayName" placeholder=" Customer Display name:.." />
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">
+                        Customer Email:
+                    </td>
+                    <td style="text-align:left;" colspan="2">
+                        <input type="email" id="emailAddress" placeholder="enter valid email:.." required />
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">
+                        Customer Phone:
+                    </td>
+                    <td style="text-align:left;">
+                        <input type="text" id="workPhone" placeholder="work phone:.."
+                               required minlength="10" maxlength="10" pattern="/(7|8|9)\d{9}/" />
+                    </td>
+                    <td style="text-align:left;">
+                        <input type="text" id="mobile" placeholder="mobile:.."
+                               required minlength="10" maxlength="10" pattern="/(7|8|9)\d{9}/" />
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align:left">
+                        website
+                    </td>
+                    <td style="text-align:left;">
+                        <input type="url" id="website" placeholder="Enter Site.." />
+                    </td>
+
+                </tr>
+                <tr>
+                    <td style="width:20%">  <button class="button-save" type="submit" class="form-control" value="submit" form="form1" onclick="submitfun()">Submit</button></td>
+
+                    <td style="width: 20%">  <button class="button-cancel" type="reset" class="form-control" value="reset" form="form1" onreset="resetData()"> cancel</button></td>
+
+
+                </tr>
+            </table>
+        </form>
+    </div>
+    <script>
+        function submitfun() {
+
+        }
+
+        function resetData() {
+            alert("The Form Was Reset.");
+            lastName.text = "";
+            firstName.text = "";
+            companyName.text = "";
+            companyDisplayName.text = "";
+            workPhone.text = "";
+            mobile.text = "";
+            website.text = "";
+
+            Salutation.selectedvalue = -1;
+
+        }
+
+        function changeValue() {
+            var i = document.getElementById("Salutation").value;
+            if (i == -1) {
+                alert("Please Select Salutation:");
+            }
+            alert("your selected item is : " + i);
+        }
+    </script>
+</body>
+</html>

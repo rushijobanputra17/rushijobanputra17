@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Title of the document</title>
+    <link rel="stylesheet" href="widgEditor/css/widgEditor.css" />
+</head>
+
+<body>
+
+
+    <textarea id="NicEdit" cols="80" rows="5">Some Sample Text</textarea>
+
+<textarea id="NotNicEdit" cols="80" rows="5">Some Sample Text</textarea>
+
+    <div id="NicEdit2">Some Sample Text</div>
+
+    <script src="http://js.nicedit.com/nicEdit-latest.js"></script>
+    <script>
+
+        bkLib.onDomLoaded(function () {
+
+            new nicEditor().panelInstance('NicEdit');
+
+            new nicEditor().panelInstance('NicEdit2');
+
+        });
+
+    </script>
+</body>
+
+</html>
