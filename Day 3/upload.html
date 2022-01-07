@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image upload</title>
+</head>
+
+<body>
+    <header>
+        <center><h2>Day3 task</h2></center>
+
+        <center><h4>Upload Function</h4></center>
+
+
+    </header>
+    <p>Upload image:</p>
+  
+        <input type="file" id="myFile" name="filename">
+        <button id="btn" onclick="mysubmit(myFile)">submit</button>
+
+        <br />
+        <p id="answer">
+            File Name here :
+        </p>
+
+        
+  
+    <script>
+        function mysubmit(input) {
+
+            var input = document.getElementById("myFile").value;
+            console.log(input);
+         
+
+
+         
+         
+            document.getElementById('answer').innerHTML =input;
+
+
+           
+
+
+          
+           
+        }
+    </script>
+</body>
+
+</html>
