@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WebStorage</title>
+</head>
+
+<body>
+   <header><center><h2>Day 4 Web Storage API</h2></center></header>
+    <div>
+        <p>Username:</p>
+        <input id="userName" />
+        <button onclick="store()" >submit</button>
+        <p id="user" >
+            Local Storage value display here:
+        </p>
+    </div>
+
+    <script>
+
+        function store() {
+            var ans = document.getElementById("userName").value; 
+            if (typeof (Storage) !== "undefined") {
+                localStorage.setItem("LastITEM", ans);
+              
+                document.getElementById("user").innerHTML = localStorage.getItem("LastITEM");
+            }
+        }
+
+       
+    </script>
+</body>
+
+</html>

@@ -9,13 +9,15 @@
     <h4>Ckick here to get location</h4>
     <button onclick="getLocation()" >Click</button>
 
-    <p id="getLocation"></p>
+    <p id="getLocation">
+        Here
+    </p>
     <script>
         var ans = document.getElementById("getLocation");
 
         function getLocation() {
             if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(showPosition);
+                navigator.geolocation.getCurrentPosition(showPosition,errorCall);
                 console.log("PASS");
             }
             else {
@@ -27,6 +29,11 @@
         function showPosition(position) {
             ans.innerHTML = "Latitude: " + position.coords.latitude +
                 "<br>Longitude: " + position.coords.longitude;
+        }
+
+
+        function errorCall(error) {
+            ans.innerHTML = "Location Permission Denied...";
         }
     </script>
 </body>
