@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Geo location</title>
+</head>
+
+<body>
+    <header><center><h2>Day 4 Geo Location</h2></center></header>
+    <h4>Ckick here to get location</h4>
+    <button onclick="getLocation()" >Click</button>
+
+    <p id="getLocation"></p>
+    <script>
+        var ans = document.getElementById("getLocation");
+
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+                console.log("PASS");
+            }
+            else {
+                ans.innerHTML = "Location Permssion Denied...";
+                console.log("fail");
+            }
+        }
+
+        function showPosition(position) {
+            ans.innerHTML = "Latitude: " + position.coords.latitude +
+                "<br>Longitude: " + position.coords.longitude;
+        }
+    </script>
+</body>
+
+</html>
