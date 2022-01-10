@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Drag And Drop</title>
+
+    <style>
+        table {
+            border-collapse: collapse;
+            background-color: #793726;
+            background-image: url("block.jfif");
+        }
+
+        img {
+            height: 120px;
+            display: block;
+            width: 110px;
+            margin-left: 20px;
+        }
+
+        .div-block {
+            width: 200px;
+            height: 120px;
+            padding: 10px;
+            background-image: url("sky.jpg");
+        }
+
+        .div-table {
+            width: 200px;
+            height: 120px;
+        }
+    </style>
+    <script>
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+
+        function drag(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+        }
+
+        function drop(ev) {
+            ev.preventDefault();
+
+            if (ev.target.id == "wdiv1" || ev.target.id == "wdiv2" || ev.target.id == "wdiv3" || ev.target.id == "wdiv4"
+                || ev.target.id == "wdiv5" || ev.target.id == "wdiv6" || ev.target.id == "wdiv7" || ev.target.id == "wdiv8"
+                || ev.target.id == "wdiv9" || ev.target.id == "wdiv10" || ev.target.id == "wdiv11" || ev.target.id == "wdiv12"
+                || ev.target.id == "wdiv13" || ev.target.id == "wdiv14") {
+                alert("Wrong place.");
+                console.log("wrong");
+            }
+            else {
+
+                if (ev.target.id == "div4" || ev.target.id == "winh2") {
+                    console.log(ev.target.id);
+
+                    alert("YOU WIN!!!");
+                    console.log("win");
+
+                    var myob = document.getElementById("winh2");
+                    if (myob != null) {
+                        myob.parentNode.removeChild(myob);
+                    }
+                    console.log(myob);
+
+                    var data = ev.dataTransfer.getData("text");
+
+                    var data = ev.dataTransfer.getData("text");
+                    ev.target.appendChild(document.getElementById(data));
+                }
+
+                else {
+                    var myob = document.getElementById("winh2");
+
+                    if (myob == null) {
+                        const para = document.createElement("h4");
+                        para.setAttribute('id', 'winh2');
+                        const node = document.createTextNode("WINNING POSTION.");
+
+                        para.appendChild(node);
+                        const element = document.getElementById("div4");
+                        element.appendChild(para)
+                    }
+                    var data = ev.dataTransfer.getData("text");
+                    ev.target.appendChild(document.getElementById(data));
+
+                    ;
+                }
+                console.log(ev.target.id);
+
+            }
+        }
+    </script>
+
+
+</head>
+
+<body>
+    <header><center><h1>Day-4 Drag & Drop</h1></center></header>
+    <div class="container">
+        <table>
+            <tr>
+                <td>
+                    <div id="wdiv1" class="div-table" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                </td>
+
+                <td>
+                    <div id="wdiv2" class="div-table" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                </td>
+
+                <td>
+                    <div id="div1" class="div-block" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+                    </div>
+                </td>
+                <td>
+                    <div id="div2" class="div-block" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    </div>
+                </td>
+                <td>
+                    <div id="wdiv3" class="div-table" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                </td>
+
+                <td>
+                    <div id="wdiv4" class="div-table" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                </td>
+
+
+
+            </tr>
+
+
+
+
+            <tr>
+                <td>
+                    <div id="wdiv5" class="div-table" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                </td>
+
+                <td>
+                    <div id="div3" class="div-block" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                </td>
+
+                <td>
+                    <div id="div4" class="div-block" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <h4 id="winh2">
+                            WINNING POSTION
+                        </h4>
+                    </div>
+                </td>
+                <td>
+                    <div id="div5" class="div-block" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    </div>
+                </td>
+                <td>
+                    <div id="div6" class="div-block" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    </div>
+                </td>
+                <td>
+                    <div id="wdiv6" class="div-table" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <div id="wdiv7" class="div-table" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                </td>
+
+                <td>
+                    <div id="div7" class="div-block" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                </td>
+
+                <td>
+                    <div id="div8" class="div-block" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+                    </div>
+                </td>
+                <td>
+                    <div id="div49" class="div-block" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    </div>
+                </td>
+                <td>
+                    <div id="div10" class="div-block" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    </div>
+                </td>
+                <td>
+                    <div id="wdiv8" class="div-table" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <div id="wdiv9" class="div-table" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                </td>
+
+                <td>
+                    <div id="div11" class="div-block" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                </td>
+
+                <td>
+                    <div id="div12" class="div-block" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+                    </div>
+                </td>
+                <td>
+                    <div id="div13" class="div-block" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    </div>
+                </td>
+                <td>
+                    <div id="div14" class="div-block" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    </div>
+                </td>
+                <td>
+                    <div id="wdiv10" class="div-table" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div id="wdiv11" class="div-table" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                </td>
+
+                <td>
+                    <div id="wdiv12" class="div-table" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                </td>
+
+                <td>
+                    <div id="div15" class="div-block" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+                    </div>
+                </td>
+                <td>
+                    <div id="div16" class="div-block" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <img src="dra.png" id="drag1" draggable="true" ondragstart="drag(event)" />
+                    </div>
+                </td>
+                <td>
+                    <div id="wdiv13" class="div-table" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                </td>
+                <td>
+                    <div id="wdiv14" class="div-table" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                </td>
+
+
+
+            </tr>
+
+
+        </table>
+    </div>
+
+</body>
+
+</html>
